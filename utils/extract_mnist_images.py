@@ -8,6 +8,7 @@ from tqdm import tqdm
 import numpy as np
 import _csv as csv
 
+
 def extract_images(save_dir, csv_fname):
     assert os.path.exists(save_dir), "Directory {} to save images does not exist".format(save_dir)
     assert os.path.exists(csv_fname), "Csv file {} does not exist".format(csv_fname)
@@ -27,5 +28,5 @@ def extract_images(save_dir, csv_fname):
             
             
 if __name__ == '__main__':
-    extract_images('data/train/images', '../data/mnist_train.csv')
-    extract_images('data/test/images', '../data/mnist_test.csv')
+    extract_images('data/train/images', 'data/mnist_train.csv')
+    extract_images('data/test/images', 'data/mnist_test.csv')

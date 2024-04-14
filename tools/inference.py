@@ -222,7 +222,11 @@ def inference(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Arguments for vae inference')
+    # parser.add_argument('--config', dest='config_path',
+    #                     default='config/vae_kl.yaml', type=str)
+    # parser.add_argument('--config', dest='config_path',
+    #                     default='config/vae_kl_latent4.yaml', type=str)
     parser.add_argument('--config', dest='config_path',
-                        default='config/vae_kl.yaml', type=str)
+                        default='config/vae_kl_latent4_enc_channel_dec_fc_condition.yaml', type=str)
     args = parser.parse_args()
     inference(args)

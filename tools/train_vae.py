@@ -136,7 +136,11 @@ def train(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Arguments for conditional vae training')
+    # parser.add_argument('--config', dest='config_path',
+    #                     default='config/vae_kl.yaml', type=str)
+    # parser.add_argument('--config', dest='config_path',
+    #                     default='config/vae_kl_latent4.yaml', type=str)
     parser.add_argument('--config', dest='config_path',
-                        default='config/vae_kl.yaml', type=str)
+                        default='config/vae_kl_latent4_enc_channel_dec_fc_condition.yaml', type=str)
     args = parser.parse_args()
     train(args)
